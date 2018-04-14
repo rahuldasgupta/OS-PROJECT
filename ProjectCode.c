@@ -76,6 +76,7 @@ printf("Enter process %d id: ",i+1);
 scanf("%d",&id[i]);
 printf("Enter process %d burst time: ",i+1);
 scanf("%d",&bt[i]);
+bt[i]=bt[i]*2;
 printf("Enter process %d priority: ",i+1);
 scanf("%d",&p[i]);
 }
@@ -131,6 +132,7 @@ void roundrobin()
  		scanf("%d",&p[i].at);
  		printf("Enter burst time [process] %c: ",p[i].name);
  		scanf("%d",&p[i].bt);
+		p[i].bt=p[i].bt*2;
  		p[i].rt=p[i].bt;
  		p[i].completed=0;
  		sum_bt+=p[i].bt;
